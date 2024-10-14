@@ -1,9 +1,10 @@
 <?php
 class Conexion {
-    private $host = 'localhost';
-    private $db = 'inventario';
-    private $user = 'root';
-    private $password = '123456';
+    //Colocar las credenciales de la base de datos
+    private $host = ''; 
+    private $db = '';
+    private $user = '';
+    private $password = '';
     private $charset = 'utf8mb4';
     private $pdo;
 
