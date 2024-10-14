@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "apiproductos",
+    "collectionId": "b71e9a11-66d2-47e4-92a4-96e9ba00bbff",
+    "dateExported": "2024-10-14T01:24:57.603Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3c61dfa1-6e2e-4a9a-b78b-dc0049a82cac",
+            "colId": "b71e9a11-66d2-47e4-92a4-96e9ba00bbff",
+            "containerId": "",
+            "name": "obtener productos",
+            "url": "http://localhost/api/producto",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-10-14T00:09:54.655Z",
+            "modified": "2024-10-14T00:11:50.099Z",
+            "headers": []
+        },
+        {
+            "_id": "41fdfad0-5da3-465c-9fd1-ef868552dbf2",
+            "colId": "b71e9a11-66d2-47e4-92a4-96e9ba00bbff",
+            "containerId": "",
+            "name": "obtener producto por ID",
+            "url": "http://localhost/api/producto/120",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-10-14T00:12:15.609Z",
+            "modified": "2024-10-14T00:12:46.604Z",
+            "headers": []
+        },
+        {
+            "_id": "0ae32cec-b260-49c1-834c-6954d7ad6eab",
+            "colId": "b71e9a11-66d2-47e4-92a4-96e9ba00bbff",
+            "containerId": "",
+            "name": "crear producto",
+            "url": "http://localhost/api/producto",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-10-14T00:14:52.095Z",
+            "modified": "2024-10-14T00:58:47.263Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"id\": 320,\n    \"nombre\": \"Queso\",\n    \"precio\": 1500,\n    \"cantidad\": 34,\n    \"stock\": 100\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "e326bebb-284f-43b4-99d7-5c5b0864b09a",
+            "colId": "b71e9a11-66d2-47e4-92a4-96e9ba00bbff",
+            "containerId": "",
+            "name": "Actualizar producto",
+            "url": "http://localhost/api/producto/115",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-10-14T01:09:36.206Z",
+            "modified": "2024-10-14T01:22:34.003Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nombre\": \"Queso\",\n    \"precio\": 1500,\n    \"cantidad\": 34,\n    \"stock\": 100\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "af253bb2-ff5b-46ca-80f3-12a295bbbf66",
+            "colId": "b71e9a11-66d2-47e4-92a4-96e9ba00bbff",
+            "containerId": "",
+            "name": "Borrar producto",
+            "url": "http://localhost/api/producto/115",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-10-14T01:22:53.177Z",
+            "modified": "2024-10-14T01:24:09.940Z",
+            "headers": []
+        }
+    ],
+    "ref": "_StArIRsj9mcwrlgHLoA6zhHdiZa8HaqUd5y4xR0FQtfnHoIWRFd9ib5thEfOdGCZL0_q2UQKtRYVbxcqi7Azw"
+}

@@ -1,5 +1,5 @@
 <?php
-require_once 'db/Conexion.php';
+require_once 'db/ConectionDB.php';
 
 class Producto {
     private $pdo;
@@ -10,10 +10,10 @@ class Producto {
     }
 
     // Crear un nuevo producto
-    public function crear($nombre, $stock, $precio) {
-        $sql = "INSERT INTO productos (nombre, stock, precio) VALUES (:nombre, :stock, :precio)";
+    public function crear($id,$nombre,$precio, $cantidad, $stock) {
+        $sql = "INSERT INTO productos (producto_id,nombre,precio,cantidad,stock) VALUES (:id, :nombre, :precio, :cantidad, :stock)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute(['nombre' => $nombre, 'stock' => $stock, 'precio' => $precio]);
+        $stmt->execute(['id'=>$id, 'nombre' => $nombre, 'precio' => $precio, 'cantidad'=>$cantidad, 'stock' =>$stock]);
         return $this->pdo->lastInsertId();
     }
 
@@ -32,10 +32,10 @@ class Producto {
     }
 
     // Actualizar un producto
-    public function actualizar($id, $nombre, $stock, $precio) {
-        $sql = "UPDATE productos SET nombre = :nombre, stock = :stock, precio = :precio WHERE producto_id = :id";
+    public function actualizar($id, $nombre,$cantidad,$precio, $stock, ) {
+        $sql = "UPDATE productos SET nombre = :nombre, precio = :precio, cantidad= :cantidad, stock = :stock  WHERE producto_id = :id";
         $stmt = $this->pdo->prepare($sql);
-        return $stmt->execute(['id' => $id, 'nombre' => $nombre, 'stock' => $stock, 'precio' => $precio]);
+        return $stmt->execute(['id' => $id, 'nombre' => $nombre, 'precio' => $precio, 'cantidad' => $cantidad, 'stock' => $stock, ]);
     }
 
     // Eliminar un producto
